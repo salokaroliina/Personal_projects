@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js">
+    </script>
+    <title>Tarinageneraattori</title>
+  </head>
+  <body>
+    <header>
+      <a href="english.html">English</a>
+    </header>
+    <div class="wrapper">
+      <h1 id="header">Tarinageneraattori</h1>
+      <p id="info">Valitse pudotusvalikosta aihe</p>
+        <article class="choose">
+          <select id="dropdown" name="category">
+            <option value="genre">Genre</option>
+            <option value="fantasy">Fantasianimet</option>
+            <option value="realF">Nimet / Naiset</option>
+            <option value="realM">Nimet / Miehet</option>
+            <option value="realO">Nimet / Muut</option>
+          </select>
+        </article>
+        <article class="generator">
+          <p id="output"></p>
+          <button id="generate" type="button" onclick="generate()">Paina tästä!</button>
+        </article>
+        <article class="storage">
+            <ul id="previous">
+              <li>Genre:</li>
+            </ul>
+            <ul id="previousSecond">
+              <li>Fantasianimet:</li>
+            </ul>
+            <ul id="previousThird">
+              <li>Nimet / Naiset:</li>
+            </ul>
+            <ul id="previousFourth">
+              <li>Nimet / Miehet:</li>
+            </ul>
+            <ul id="previousFifth">
+              <li>Nimet / Muut:</li>
+            </ul>
+        </article>
+    </div>
+
+  </body>
+</html>

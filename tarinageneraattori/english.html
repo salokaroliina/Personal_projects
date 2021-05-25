@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="scriptEng.js">
+    </script>
+    <title>Story generator</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">Finnish</a>
+    </header>
+    <div class="wrapper">
+      <h1 id="header">Story generator</h1>
+      <p id="info">Choose a theme from the dropdown list</p>
+        <article class="choose">
+          <select id="dropdown" name="category">
+            <option value="genre">Genre</option>
+            <option value="fantasy">Fantasynames</option>
+            <option value="realF">Names / Women</option>
+            <option value="realM">Names / Men</option>
+            <option value="realO">Names / Other</option>
+          </select>
+        </article>
+        <article class="generator">
+          <p id="output"></p>
+          <button id="generate" type="button" onclick="generate()">Press here!</button>
+        </article>
+        <article class="storage">
+            <ul id="previous">
+              <li>Genre:</li>
+            </ul>
+            <ul id="previousSecond">
+              <li>Fantasynames:</li>
+            </ul>
+            <ul id="previousThird">
+              <li>Names / Women:</li>
+            </ul>
+            <ul id="previousFourth">
+              <li>Names / Men:</li>
+            </ul>
+            <ul id="previousFifth">
+              <li>Names / Other:</li>
+            </ul>
+        </article>
+    </div>
+
+  </body>
+</html>
