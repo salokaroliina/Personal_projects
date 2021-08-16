@@ -1,0 +1,14 @@
+#contactinfo{
+  float: left;
+  padding: 5px;
+  font-size: 18px;
+}
+
+#contacts{
+  display: block;
+  float: left;
+  width: 350px;
+  text-align: left;
+  padding: 5px;
+  margin: 0px 50px 0px 100px;
+}

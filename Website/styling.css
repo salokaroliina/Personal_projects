@@ -1,0 +1,40 @@
+*{
+  font-family: 'Andada Pro', serif;
+}
+
+#wrapper{
+  width: 1400px;
+  height: 920px;
+  background-color: #fce5ff;
+  /*up, left, bottom, right */
+  margin: auto;
+}
+
+#header{
+  background-image: url(images/banner.png);
+  padding: 5px;
+  height: 150px;
+  width: auto;
+}
+
+nav{
+  float: left;
+  margin: 30px 5px 5px 5px;
+}
+
+#hp,#about,#proj,#comm,#contact{
+  display: grid;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 35px;
+  background-color: white;
+  width: 200px;
+  padding: 15px;
+  margin: 10px;
+}
+
+#hp:hover,#about:hover,#proj:hover,#comm:hover,#contact:hover{
+  background-color: #f7adff;
+}
