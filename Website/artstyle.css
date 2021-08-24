@@ -1,3 +1,7 @@
+#wrapper{
+  height: 1200px;
+}
+
 #artinfo{
   float: left;
   padding: 5px;
@@ -5,8 +9,7 @@
 }
 
 #art{
-  display: block;
-  float: left;
+float: left;
   width: 350px;
   text-align: left;
   padding: 5px;
@@ -15,28 +18,12 @@
 
 #commission{
   float: left;
-  display: block;
   width: 350px;
   text-align: left;
   padding: 5px;
-  margin: 0px 10px 0px 30px;
+  margin: 0px 50px 0px 100px;
 }
 
-#contactform{
-  float: left;
-  width: 500px;
-  text-align: left;
-  background-color: white;
-  padding: 5px;
-  margin:  0px 50px 0px 100px;
-}
-
-#contactinfo{
-  padding: 5px;
-  position: relative;
-}
-
-#commissiontype{
-  padding: 5px;
-  position: relative;
+ul,li{
+  margin-left: -10px;
 }
