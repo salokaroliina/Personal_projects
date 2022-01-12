@@ -7,7 +7,7 @@ const realO = ["Kuura", "Aalto"];
 // function that's linked to the button
 function generate() {
   // list-variable that takes value from the dropdown-list
-  let list = document.getElementById('dropdown');
+  const list = document.getElementById('dropdown');
   // variable that takes value from list-variable
   let select = list.options[list.selectedIndex].value;
 
