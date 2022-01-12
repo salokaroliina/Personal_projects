@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+  </head>
+  <body>
+    <div id="form">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name">
+      <br><br>
+      <label for="living">I live: </label>
+      <select name="living" id="living">
+        <option value="choose">--Choose--</option>
+        <option value="alone">Alone</option>
+        <option value="partner">With a partner(s)</option>
+        <option value="parents">With parents</option>
+        <option value="child">With a child</option>
+        <option value="family">With a family</option>
+      </select>
+      <br>
+      <p>Age: </p>
+      <label for="<20"><20</label>
+      <input type="radio" name="age" value="<20" id="<20">
+      <br>
+      <label for="<30"><30</label>
+      <input type="radio" name="age" value="<30" id="<30">
+      <br>
+      <label for="<40"><40</label>
+      <input type="radio" name="age" value="<40" id="<40">
+      <br>
+      <label for="<50"><50</label>
+      <input type="radio" name="age" value="<50" id="<50">
+      <br>
+      <p>I speak: </p>
+      <label for="fin">Finnish</label>
+      <input type="checkbox" name="lang" value="fin" id="fin">
+      <br>
+      <label for="eng">English</label>
+      <input type="checkbox" name="lang" value="eng" id="eng">
+      <br>
+      <label for="swe">Swedish</label>
+      <input type="checkbox" name="lang" value="swe" id="swe">
+      <br>
+      <label for="rus">Russian</label>
+      <input type="checkbox" name="lang" value="rus" id="rus">
+      <br><br>
+      <p>Free word:</p>
+      <textarea name="textarea" rows="8" cols="50" id="textarea"></textarea>
+      <br><br>
+      <button type="submit" name="button" id="submit" onclick="submitForm()">Submit</button>
+    </div>
+  </body>
+</html>
