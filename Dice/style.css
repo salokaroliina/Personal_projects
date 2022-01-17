@@ -1,0 +1,13 @@
+*{
+  text-align: center;
+}
+
+.throwadice{
+  width: 200px;
+  margin: auto;
+}
+
+button{
+  background: none;
+  border: none;
+}
