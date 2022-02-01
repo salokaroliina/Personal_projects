@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <script src="script.js" charset="utf-8"></script>
+      <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Gacha</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="gachaMachine">
+
+        <!--THE MACHINE AND PARTS -->
+        <img src="Images/Pink/machine.png" id="machine">
+        <!--HATCH WITHOUT A BALL (GETS REPLACED WITH A BALL-IMG)-->
+        <img src="Images/Pink/balls/noball.png" usemap="#hatch_map" id="hatch" onclick="openModal()">
+        <img src="Images/Pink/balls/noball.png" id="noball">
+        <!--HANDLE -->
+        <img src="Images/Pink/handle/handle_01.png" usemap="#handle_map" id="handle">
+
+      </div><!--gachaMachine -->
+
+      <!--MAP FOR HANDLE -->
+      <map name="handle_map">
+        <area coords="96,96,96" shape="circle" id="turnHandle" onclick="gacha()">
+      </map>
+
+      <!--MAP FOR HATCH -->
+      <map name="hatch_map">
+        <area coords="24,24,24" shape="circle">
+      </map>
+
+      <!--DIV FOR THE MODAL -->
+      <div id="myModal" class="modal">
+        <div class="modalContent">
+          <p id="modalText">Some text here</p>
+          <span class="close" onclick="closeModal()">Close</span>
+        </div><!--modalContent-->
+      </div><!--myModal-->
+
+
+    </div> <!--wrapper-->
+
+  </body>
+</html>
