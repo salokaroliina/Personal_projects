@@ -1,23 +1,29 @@
-// DIFFERENT BALL-OPTIONS
-const colors =
-['Images/Pink/Balls/01.png','Images/Pink/Balls/02.png','Images/Pink/Balls/03.png','Images/Pink/Balls/04.png','Images/Pink/Balls/05.png','Images/Pink/Balls/06.png',
-'Images/Pink/Balls/07.png','Images/Pink/Balls/08.png','Images/Pink/Balls/09.png','Images/Pink/Balls/10.png','Images/Pink/Balls/11.png','Images/Pink/Balls/12.png',
-'Images/Pink/Balls/13.png','Images/Pink/Balls/14.png','Images/Pink/Balls/15.png','Images/Pink/Balls/16.png','Images/Pink/Balls/17.png','Images/Pink/Balls/18.png',
-'Images/Pink/Balls/19.png','Images/Pink/Balls/20.png','Images/Pink/Balls/21.png','Images/Pink/Balls/22.png','Images/Pink/Balls/23.png','Images/Pink/Balls/24.png'];
-
 // USE THE MACHINE
 function gacha() {
+  // DIFFERENT BALL-OPTIONS (24)
+  const colors =
+  ['Images/Balls/01.png','Images/Balls/02.png','Images/Balls/03.png','Images/Balls/04.png','Images/Balls/05.png','Images/Balls/06.png',
+  'Images/Balls/07.png','Images/Balls/08.png','Images/Balls/09.png','Images/Balls/10.png','Images/Balls/11.png','Images/Balls/12.png',
+  'Images/Balls/13.png','Images/Balls/14.png','Images/Balls/15.png','Images/Balls/16.png','Images/Balls/17.png','Images/Balls/18.png',
+  'Images/Balls/19.png','Images/Balls/20.png','Images/Balls/21.png','Images/Balls/22.png',
+  'Images/Balls/22.png','Images/Balls/23.png','Images/Balls/24.png'];
+
+  // the original clickable handle that starts the function
   const handle = document.getElementById('handle');
-    // The handle-img gets replaced with a gif when clicked, making it look like it's turning
-    handle.src = 'Images/Pink/handle/handle_anim.gif'; // <---- CHECK THE PATH LATER
+  // new handle that gets replaced with the gif
+  const handleReplace = document.getElementById('handleReplace');
+    // original handle style goes 'none'
+    handle.style.display = 'none';
+    // replacing the unclickable image with gif instead of the original handle
+    // prevents the handle being spammed
+    handleReplace.src = 'Images/handle_anim.gif';
 
       // TIMEOUT AFTER TURNING THE HANDLE
-      const time = setTimeout(ball, 1100);
+      const time = setTimeout(ball, 1450);
       function ball() {
         // The img on top (empty hatch) disappears
         document.getElementById('noball').style.display = 'none';
         // turnable handle disappears so the machine can't be spammed
-        handle.style.display = 'none';
         // Gives random ball from the 'colors' array
         let x = Math.floor(Math.random() * colors.length);
           // noball-img gets replaced with the random image
@@ -31,7 +37,26 @@ function openModal() {
   const ball = document.getElementById('openModal');
   const modal = document.getElementById('myModal');
     // the hatch looks empty again
-    document.getElementById('hatch').src = "Images/Pink/Balls/noball.png"; // <---- CHECK THE PATH LATER
+    document.getElementById('hatch').src = "Images/noball.png";
+
+    // RANDOM NOTE
+    const notes = [1,2,3,4];
+    let ranNote = Math.floor(Math.random() * notes.length);
+
+    // manipulating CSS with JS by changing the #note's bg img
+    switch (ranNote) {
+      case 1:
+      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_01.png')";
+        break;
+      case 2:
+      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_02.png')";
+        break;
+      case 3:
+      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_03.png')";
+        break;
+      default:
+      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_04.png')";
+    }
 
     // RANDOM TEXT APPEARS ON THE MODAL
     const text = ['Hello world', 'Hello fucker', 'Yeet yeet'];
@@ -47,7 +72,7 @@ function closeModal() {
   const close = document.getElementsByClassName('close');
     // Modal display goes 'none'
     modal.style.display = 'none';
-    document.getElementById('handle').src = 'Images/Pink/handle/handle_01.png'; // <---- CHECK THE PATH LATER
+    document.getElementById('handle').src = 'Images/handle_01.png';
     // Makes the hatch look empty and makes it non-clickable
     document.getElementById('noball').style.display = 'block';
     // handle turns back to normal
@@ -60,7 +85,7 @@ window.onclick = function(event) {
     // Modal display goes 'none' when the modal-area is clicked
     if (event.target == modal) {
       modal.style.display = "none";
-      document.getElementById('handle').src = 'Images/Pink/handle/handle_01.png'; // <---- CHECK THE PATH LATER
+      document.getElementById('handle').src = 'Images/handle_01.png';
       // Makes the hatch look empty and makes it non-clickable
       document.getElementById('noball').style.display = 'block';
       // handle turns back to normal

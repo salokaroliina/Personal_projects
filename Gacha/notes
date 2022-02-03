@@ -1,9 +1,6 @@
 Things to do:
 
 Code:
-- prevent the handle being spammed (ball must be clicked before the handle can be clicked again)
-(maybe with a loop?)
-- make yellow a rare color (1/50 or 1/100)
 - make the machine change every now and then
 
 Graphics and non-code-things:

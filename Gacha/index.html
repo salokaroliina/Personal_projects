@@ -14,28 +14,20 @@
       <div class="gachaMachine">
 
         <!--THE MACHINE AND PARTS -->
-        <img src="Images/Pink/machine.png" id="machine">
-        <!--HATCH WITHOUT A BALL (GETS REPLACED WITH A BALL-IMG)-->
-        <img src="Images/Pink/balls/noball.png" usemap="#hatch_map" id="hatch" onclick="openModal()">
-        <img src="Images/Pink/balls/noball.png" id="noball">
-        <!--HANDLE -->
-        <img src="Images/Pink/handle/handle_01.png" usemap="#handle_map" id="handle">
-
+        <img src="Images/machine.png" id="machine">
+        <!--Hatch without a ball (gets replaced wit an img with a ball)-->
+        <img src="Images/noball.png" id="hatch" onclick="openModal()">
+        <!--Image of an empty hatch -->
+        <img src="Images/noball.png" id="noball">
+        <!--Handle -->
+        <img src="Images/handle_01.png" id="handleReplace">
+        <img src="Images/handle_01.png" id="handle" onclick="gacha()">
       </div><!--gachaMachine -->
 
-      <!--MAP FOR HANDLE -->
-      <map name="handle_map">
-        <area coords="96,96,96" shape="circle" id="turnHandle" onclick="gacha()">
-      </map>
-
-      <!--MAP FOR HATCH -->
-      <map name="hatch_map">
-        <area coords="24,24,24" shape="circle">
-      </map>
 
       <!--DIV FOR THE MODAL -->
       <div id="myModal" class="modal">
-        <div class="modalContent">
+        <div class="modalContent" id="note">
           <p id="modalText">Some text here</p>
           <span class="close" onclick="closeModal()">Close</span>
         </div><!--modalContent-->
