@@ -8,6 +8,7 @@ body{
   user-select: none;
 }
 
+
 body{
   background-color: rgb(249, 205, 255);
   background-image: url(Images/bg_stars.png);
@@ -86,13 +87,25 @@ body{
   text-align: center;
 }
 
-
-#modalText{
-  font-size: 40px;
-  padding: 180px;
+#modalText, #creditText{
+  font-size: 45px;
+  padding-top: 200px;
+  padding-bottom: 180px;
   font-family: 'DotGothic16', sans-serif;
   color: rgb(157,0,162);
   z-index: 4;
+}
+
+#credits {
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 1148px;
+  height: 680px;
+  text-align: center;
+}
+
+#creditText{
+  font-size: 18px;
 }
 
 
@@ -101,6 +114,11 @@ span{
   font-family: 'DotGothic16', sans-serif;
   color: rgb(157,0,162);
 }
+
+
+
+
+
 
 span:hover, #hatch:hover, #handle:hover{
   cursor: pointer;

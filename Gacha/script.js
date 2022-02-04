@@ -16,7 +16,7 @@ function gacha() {
     handle.style.display = 'none';
     // replacing the unclickable image with gif instead of the original handle
     // prevents the handle being spammed
-    handleReplace.src = 'Images/handle_anim.gif';
+    handleReplace.src = 'Images/handle_anim.gif'; // <---- DO SOMETHING ABOUT THIS
 
       // TIMEOUT AFTER TURNING THE HANDLE
       const time = setTimeout(ball, 1450);
@@ -34,7 +34,6 @@ function gacha() {
 // OPEN THE MODAL
 function openModal() {
   // clicking the ball opens a new modal
-  const ball = document.getElementById('openModal');
   const modal = document.getElementById('myModal');
     // the hatch looks empty again
     document.getElementById('hatch').src = "Images/noball.png";
@@ -59,7 +58,9 @@ function openModal() {
     }
 
     // RANDOM TEXT APPEARS ON THE MODAL
-    const text = ['Hello world', 'Hello fucker', 'Yeet yeet'];
+    const text = ['Everything will be alright','You are loved','Go by your own pace','Everyone is unique, including you','You are not a burden to anyone',
+    'All of your emotions are valid','It is okay to say you are not strong enough','It is okay to ask for help when you need it',
+    'You are perfect the way you are','It is never too late to try new things','Your past does not define you','You deserve peace in your life'];
     let random = Math.floor(Math.random() * text.length);
       // modal is displayed as a block
       modal.style.display = 'block';
@@ -91,4 +92,16 @@ window.onclick = function(event) {
       // handle turns back to normal
       handle.style.display = 'block';
     }
+}
+
+
+function creditModal() {
+  const credits = document.getElementById('credModal');
+  document.getElementById('credits').style.backgroundImage = "url('Images/Notes/note_01.png')";
+  credits.style.display = 'block';
+}
+
+function closeCredits(){
+  const credits = document.getElementById('credModal');
+  credits.style.display = 'none';
 }
