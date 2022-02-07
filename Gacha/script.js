@@ -1,34 +1,55 @@
+let index = 0;
 // USE THE MACHINE
 function gacha() {
-  // DIFFERENT BALL-OPTIONS (24)
-  const colors =
-  ['Images/Balls/01.png','Images/Balls/02.png','Images/Balls/03.png','Images/Balls/04.png','Images/Balls/05.png','Images/Balls/06.png',
-  'Images/Balls/07.png','Images/Balls/08.png','Images/Balls/09.png','Images/Balls/10.png','Images/Balls/11.png','Images/Balls/12.png',
-  'Images/Balls/13.png','Images/Balls/14.png','Images/Balls/15.png','Images/Balls/16.png','Images/Balls/17.png','Images/Balls/18.png',
-  'Images/Balls/19.png','Images/Balls/20.png','Images/Balls/21.png','Images/Balls/22.png',
-  'Images/Balls/22.png','Images/Balls/23.png','Images/Balls/24.png'];
+  // set of images the program goes through
+  const images = [];
+  images[0] = ['Images/handle_01.png'];
+  images[1] = ['Images/handle_02.png'];
+  images[2] = ['Images/handle_03.png'];
+  images[3] = ['Images/handle_04.png'];
+  images[4] = ['Images/handle_01.png'];
 
   // the original clickable handle that starts the function
   const handle = document.getElementById('handle');
-  // new handle that gets replaced with the gif
+  // handleReplace can't be clicked, unlike the original handle
   const handleReplace = document.getElementById('handleReplace');
     // original handle style goes 'none'
     handle.style.display = 'none';
-    // replacing the unclickable image with gif instead of the original handle
-    // prevents the handle being spammed
-    handleReplace.src = 'Images/handle_anim.gif'; // <---- DO SOMETHING ABOUT THIS
-
-      // TIMEOUT AFTER TURNING THE HANDLE
-      const time = setTimeout(ball, 1450);
-      function ball() {
-        // The img on top (empty hatch) disappears
-        document.getElementById('noball').style.display = 'none';
-        // turnable handle disappears so the machine can't be spammed
-        // Gives random ball from the 'colors' array
-        let x = Math.floor(Math.random() * colors.length);
-          // noball-img gets replaced with the random image
-          document.getElementById('hatch').src = colors[x];
+    // handleReplace goes through the images-array, starting from 0
+    handleReplace.src = images[index];
+      // the program goes through all images one by one until it reaches image[0] again
+      if (index == 4) {
+        index = 0;
+      } else {
+        index++;
       }
+      // setTimeout gives time to go through every image (0.3s)
+      const myTimeout = setTimeout(gacha, 300);
+      // when the index goes back to 0, the timeOut clears out and the program stops going through the images
+      // at the same time a new timeOut starts, giving the time (0.5s) before the second function excecutes
+      if (index == 0) {
+          clearTimeout(myTimeout);
+          const newTimeout = setTimeout(ball,500)
+      }
+
+    function ball() {
+
+      const colors =
+      ['Images/Balls/01.png','Images/Balls/02.png','Images/Balls/03.png','Images/Balls/04.png','Images/Balls/05.png','Images/Balls/06.png',
+          'Images/Balls/07.png','Images/Balls/08.png','Images/Balls/09.png','Images/Balls/10.png','Images/Balls/11.png','Images/Balls/12.png',
+          'Images/Balls/13.png','Images/Balls/14.png','Images/Balls/15.png','Images/Balls/16.png','Images/Balls/17.png','Images/Balls/18.png',
+          'Images/Balls/19.png','Images/Balls/20.png','Images/Balls/21.png','Images/Balls/22.png',
+          'Images/Balls/22.png','Images/Balls/23.png','Images/Balls/24.png'];
+      // The img on top (empty hatch) disappears
+      document.getElementById('noball').style.display = 'none';
+
+      // Gives random ball from the 'colors' array
+      let x = Math.floor(Math.random() * colors.length);
+      // noball-img gets replaced with a random image
+      document.getElementById('hatch').src = colors[x];
+  }
+  // clearing the timeOut just in case
+  clearTimeout(newTimeout);
 }
 
 // OPEN THE MODAL
@@ -49,9 +70,6 @@ function openModal() {
         break;
       case 2:
       document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_02.png')";
-        break;
-      case 3:
-      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_03.png')";
         break;
       default:
       document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_04.png')";
@@ -97,7 +115,7 @@ window.onclick = function(event) {
 
 function creditModal() {
   const credits = document.getElementById('credModal');
-  document.getElementById('credits').style.backgroundImage = "url('Images/Notes/note_01.png')";
+  document.getElementById('credits').style.backgroundImage = "url('Images/creditsNote.png')";
   credits.style.display = 'block';
 }
 

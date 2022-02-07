@@ -14,25 +14,28 @@
     <audio src="Sounds/cosy-prigida-main-version-02-58-17021.mp3" id="sound" loop="loop">
     </audio>
 
-    <div class="wrapper">
+
+    <div class="buttons">
+      <button type="button" alt="music on" id="soundOn" onclick="playAudio()">Music ON</button>
+        <br> <br>
+      <button type="button" alt="music off" id="soundOff" onclick="muteAudio()">Music OFF</button>
+        <br> <br>
+      <button type="button" alt="credits" id="showCredits" onclick="creditModal()">Credits</button>
+    </div> <!--buttons -->
+
+
       <div class="gachaMachine">
 
         <!--THE MACHINE AND PARTS -->
-        <img src="Images/machine.png" id="machine">
+        <img src="Images/machine.png" alt="gacha machine" id="machine" ondragstart="return false;">
         <!--Hatch without a ball (gets replaced wit an img with a ball)-->
-        <img src="Images/noball.png" id="hatch" onclick="openModal()">
+        <img src="Images/noball.png" alt="hatch" id="hatch" ondragstart="return false;" onclick="openModal()">
         <!--Image of an empty hatch -->
-        <img src="Images/noball.png" id="noball">
+        <img src="Images/noball.png" alt="hatch/ball" ondragstart="return false;" id="noball">
         <!--Handle -->
-        <img src="Images/handle_01.png" id="handleReplace">
-        <img src="Images/handle_01.png" id="handle" onclick="gacha()">
+        <img src="Images/handle_01.png" alt="handle" ondragstart="return false;" id="handleReplace">
+        <img src="Images/handle_01.png" alt="handle" ondragstart="return false;" id="handle" onclick="gacha()">
       </div><!--gachaMachine -->
-
-        <button type="button" id="sound" onclick="playAudio()">Audio on</button>
-
-        <button type="button" id="soundOff" onclick="muteAudio()">Audio off</button>
-
-        <button type="button" id="showCredits" onclick="creditModal()">Credits</button>
 
 
       <!--DIV FOR THE MODAL -->
@@ -51,15 +54,14 @@
             Code: Karoliina S. <br> <br>
             Background music: <br>
             Music from Uppbeat (free for Creators!): <br>
-            <a href="https://uppbeat.io/t/prigida/cozy">https://uppbeat.io/t/prigida/cozy</a> <br>
+            <a href="https://uppbeat.io/t/prigida/cozy" target="_blank" rel="noopener noreferrer">https://uppbeat.io/t/prigida/cozy</a> <br>
             License code: A6KYNUVFYTCREZD9
           </p>
           <span class="close" onclick="closeCredits()">Close</span>
         </div>
-      </div>
 
+      </div> <!--gachaMachine -->
 
-    </div> <!--wrapper-->
 
   </body>
 </html>
