@@ -48,8 +48,6 @@ function gacha() {
       // noball-img gets replaced with a random image
       document.getElementById('hatch').src = colors[x];
   }
-  // clearing the timeOut just in case
-  clearTimeout(newTimeout);
 }
 
 // OPEN THE MODAL
@@ -76,9 +74,16 @@ function openModal() {
     }
 
     // RANDOM TEXT APPEARS ON THE MODAL
-    const text = ['Everything will be alright','You are loved','Go by your own pace','Everyone is unique, including you','You are not a burden to anyone',
-    'All of your emotions are valid','It is okay to say you are not strong enough','It is okay to ask for help when you need it',
-    'You are perfect the way you are','It is never too late to try new things','Your past does not define you','You deserve peace in your life'];
+    const text = ['You are loved and you matter.','You are perfect the way you are.',
+    'You may not be able to change the past, <br> but the future is yours to create.',
+    'Everyone has their own paths in life. <br>There is no need to compare yourself to others.','You deserve to be happy<br> and have peace in your life.',
+    'Always remember, you are enough.','Never change for another person. <br> Change only for yourself.',
+    'The real strength is admitting <br>you do not have it.','Learn to treat yourself the way <br>you treat your loved ones.',
+    'There is so much good in you.',
+    'Change might be scary, it may hurt and you may feel lost. <br> But in the end you will feel proud of yourself for doing it.',
+    'I am proud of you.<br> I hope you are proud of yourself too.','You are never too old to try new things.',
+    'Your worst enemy is often yourself. <br>Learn to love your enemy.','Go to the mirror and say out loud <br>"I love you" to yourself.',
+    'All of your emotions are valid.','Showing your emotions does not make you weak.<br> It makes you strong.'];
     let random = Math.floor(Math.random() * text.length);
       // modal is displayed as a block
       modal.style.display = 'block';

@@ -15,14 +15,22 @@ body{
   background-color: rgb(249, 205, 255);
   background-image: url(Images/bg_stars.png);
   background-repeat: repeat;
-  z-index: 0;
 }
 
 /*Music-control and credits-button */
 .buttons{
-  float: left;
-  width: 100px;
-  margin-left: 5px;
+height: auto;
+display: inline-block;
+}
+
+/*wrapper holds all the content except buttons */
+.wrapper{
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 /*Buttons appear only as a text */
@@ -30,47 +38,41 @@ button{
   background: none;
   border: none;
   font-family: 'DotGothic16', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(157,0,162);
 }
 
 /*gachaMachine-div*/
 .gachaMachine{
-  width: 550px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 600px;
 }
 
 /*the img of the machine*/
 #machine{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 /*round img on top of the machine-img
 makes the machine's hatch look like it's empty/there is a ball*/
 #noball, #hatch{
-  display: block;
-  position: fixed;
-  top: 748px;
-  z-index: 2;
-  margin-left: 77px;
-  margin-right: auto;
-  border-radius: 50px;
+position: absolute;
+top: 710px;
+left: 75px;
 }
 
 /*clickable handle on top of the machine-img*/
 #handleReplace, #handle{
-  position: fixed;
-  top: 538px;
-  z-index: 3;
-  margin-left: 278px;
-  margin-right: auto;
-  border-radius: 150px;
+  position: absolute;
+  top: 498px;
+  left: 278px;
 }
+
+/*TEXT CONTENT AND MODALS */
 
 /*fullscreen modal-area */
 .modal{
@@ -81,52 +83,41 @@ makes the machine's hatch look like it's empty/there is a ball*/
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(253,179,255,0.1);
-  z-index: 4;
+  background-color: rgba(253,179,255,0.2);
 }
 
 /*note that appears on the modal*/
-#note {
+.modalNote {
   background-repeat: no-repeat;
   margin: auto;
   width: 1148px;
   height: 680px;
-  text-align: center;
 }
 
-/*texts on modal*/
-#modalText, #creditText{
+.modalContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1150px;
+  max-height: 530px;
+
   font-size: 45px;
-  padding-top: 200px;
-  padding-bottom: 180px;
   font-family: 'DotGothic16', sans-serif;
   color: rgb(157,0,162);
-  z-index: 4;
 }
 
-/*credits-note that appears on the modal too*/
-#credits {
-  background-repeat: no-repeat;
-  margin: auto;
-  width: 1148px;
-  height: 680px;
-  text-align: center;
-}
-
-/*creditText has many things in common with modalText,
-font-size and paddings are different*/
 #creditText{
   font-size: 18px;
-  padding-top: 50px;
-  padding-bottom: auto;
 }
 
-/*close-button on modal*/
-span{
+#noteClose, #credClose{
+  display: inline-block;
+  width: 1148px;
+  height: 50px;
   font-size: 25px;
-  font-family: 'DotGothic16', sans-serif;
-  color: rgb(157,0,162);
 }
+
 
 /*cursor turns to pointer when something is clickable*/
 span:hover, #hatch:hover, #handle:hover, #soundOff:hover, #soundOn:hover, button:hover{

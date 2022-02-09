@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <script src="script.js" charset="utf-8"></script>
       <script src="sounds.js" charset="utf-8"></script>
       <link rel="stylesheet" href="style.css">
@@ -11,57 +13,61 @@
     <title>Gacha</title>
   </head>
   <body>
-    <audio src="Sounds/cosy-prigida-main-version-02-58-17021.mp3" id="sound" loop="loop">
-    </audio>
+
+    <audio src="Sounds/cosy-prigida-main-version-02-58-17021.mp3" id="sound" loop="loop"></audio>
+
+      <div class="buttons">
+        <button type="button" alt="music on" id="soundOn" onclick="playAudio()">Music ON</button>
+
+        <button type="button" alt="music off" id="soundOff" onclick="muteAudio()">Music OFF</button>
+
+        <button type="button" alt="credits" id="showCredits" onclick="creditModal()">Credits</button>
+      </div> <!--buttons -->
+
+      <div class="wrapper">
+        <div class="gachaMachine">
+          <!--THE MACHINE AND PARTS -->
+          <img src="Images/machine.png" alt="gacha machine" id="machine" ondragstart="return false;">
+          <!--Hatch without a ball (gets replaced wit an img with a ball)-->
+          <img src="Images/noball.png" alt="hatch" id="hatch" ondragstart="return false;" onclick="openModal()">
+          <!--Image of an empty hatch -->
+          <img src="Images/noball.png" alt="hatch/ball" ondragstart="return false;" id="noball">
+          <!--Handle -->
+          <img src="Images/handle_01.png" alt="handle" ondragstart="return false;" id="handleReplace">
+          <img src="Images/handle_01.png" alt="handle" ondragstart="return false;" id="handle" onclick="gacha()">
+        </div><!--gachaMachine -->
 
 
-    <div class="buttons">
-      <button type="button" alt="music on" id="soundOn" onclick="playAudio()">Music ON</button>
-        <br> <br>
-      <button type="button" alt="music off" id="soundOff" onclick="muteAudio()">Music OFF</button>
-        <br> <br>
-      <button type="button" alt="credits" id="showCredits" onclick="creditModal()">Credits</button>
-    </div> <!--buttons -->
+        <!--DIV FOR THE MODAL -->
+        <div id="myModal" class="modal">
+          <div class="modalNote" id="note">
+            <div class="modalContent">
+              <p id="modalText"></p>
+              </div><!--modalContent-->
+
+              <button id="noteClose" onclick="closeModal()">Close</button>
+          </div><!--modalNote-->
+        </div><!--myModal-->
 
 
-      <div class="gachaMachine">
+        <div id="credModal" class="modal">
+          <div class="modalNote" id="credits">
+            <div class="modalContent">
+              <p id="creditText">Credits: <br>
+                Graphics: Karoliina S. <br>
+                Code: Karoliina S. <br><br>
+                Background music: <br>
+                Music from Uppbeat (free for Creators!): <br>
+                <a href="https://uppbeat.io/t/prigida/cozy" target="_blank" rel="noopener noreferrer">https://uppbeat.io/t/prigida/cozy</a> <br>
+                License code: A6KYNUVFYTCREZD9
+                </p>
+              </div><!--modalContent -->
 
-        <!--THE MACHINE AND PARTS -->
-        <img src="Images/machine.png" alt="gacha machine" id="machine" ondragstart="return false;">
-        <!--Hatch without a ball (gets replaced wit an img with a ball)-->
-        <img src="Images/noball.png" alt="hatch" id="hatch" ondragstart="return false;" onclick="openModal()">
-        <!--Image of an empty hatch -->
-        <img src="Images/noball.png" alt="hatch/ball" ondragstart="return false;" id="noball">
-        <!--Handle -->
-        <img src="Images/handle_01.png" alt="handle" ondragstart="return false;" id="handleReplace">
-        <img src="Images/handle_01.png" alt="handle" ondragstart="return false;" id="handle" onclick="gacha()">
-      </div><!--gachaMachine -->
+                <button id="credClose" onclick="closeCredits()">Close</button>
 
-
-      <!--DIV FOR THE MODAL -->
-      <div id="myModal" class="modal">
-        <div class="modalContent" id="note">
-          <p id="modalText"></p>
-          <span class="close" onclick="closeModal()">Close</span>
-        </div><!--modalContent-->
-      </div><!--myModal-->
-
-
-      <div id="credModal" class="modal">
-        <div class="modalContent" id="credits">
-          <p id="creditText">Credits: <br>
-            Graphics: Karoliina S. <br>
-            Code: Karoliina S. <br> <br>
-            Background music: <br>
-            Music from Uppbeat (free for Creators!): <br>
-            <a href="https://uppbeat.io/t/prigida/cozy" target="_blank" rel="noopener noreferrer">https://uppbeat.io/t/prigida/cozy</a> <br>
-            License code: A6KYNUVFYTCREZD9
-          </p>
-          <span class="close" onclick="closeCredits()">Close</span>
-        </div>
-
-      </div> <!--gachaMachine -->
-
+          </div><!--modalNote -->
+        </div> <!--credModal -->
+      </div><!--wrapper -->
 
   </body>
 </html>
