@@ -64,13 +64,13 @@ function openModal() {
     // manipulating CSS with JS by changing the #note's bg img
     switch (ranNote) {
       case 1:
-      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_01.png')";
+      document.getElementById('note').style.backgroundColor = "red";
         break;
       case 2:
-      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_02.png')";
+      document.getElementById('note').style.backgroundColor = "black";
         break;
       default:
-      document.getElementById('note').style.backgroundImage = "url('Images/Notes/note_04.png')";
+      document.getElementById('note').style.backgroundColor = "pink";
     }
 
     // RANDOM TEXT APPEARS ON THE MODAL
@@ -120,7 +120,7 @@ window.onclick = function(event) {
 
 function creditModal() {
   const credits = document.getElementById('credModal');
-  document.getElementById('credits').style.backgroundImage = "url('Images/creditsNote.png')";
+  document.getElementById('credits').style.backgroundColor = "pink";
   credits.style.display = 'block';
 }
 

@@ -87,20 +87,28 @@ left: 75px;
 }
 
 /*note that appears on the modal*/
+/*JS adds a background-img to this class */
 .modalNote {
-  background-repeat: no-repeat;
-  margin: auto;
-  width: 1148px;
-  height: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+  padding: 20px 10px 30px 10px;
+  border-radius: 15px;
+  border-style: dotted;
+  border-color: rgb(255,255,255);
+  border-width: 3px;
 }
 
+/*text-content of the modal */
 .modalContent{
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 1150px;
-  max-height: 530px;
+
+  width: 100%;
+  height: auto;
 
   font-size: 45px;
   font-family: 'DotGothic16', sans-serif;
@@ -108,13 +116,20 @@ left: 75px;
 }
 
 #creditText{
-  font-size: 18px;
+  font-size: 20px;
 }
-
+/*close-button on the modal */
 #noteClose, #credClose{
-  display: inline-block;
-  width: 1148px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: auto;
+  max-height: 50px;
   font-size: 25px;
 }
 
