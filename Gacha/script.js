@@ -9,6 +9,10 @@ function gacha() {
   images[3] = ['Images/handle_04.png'];
   images[4] = ['Images/handle_01.png'];
 
+  document.getElementById('effectOne').play();
+  document.getElementById('effectOne').volume = 0.05;
+  document.getElementById('effectOne').playbackRate = 1;
+
   // the original clickable handle that starts the function
   const handle = document.getElementById('handle');
   // handleReplace can't be clicked, unlike the original handle
@@ -52,6 +56,8 @@ function gacha() {
 
 // OPEN THE MODAL
 function openModal() {
+  document.getElementById('effectTwo').play();
+  document.getElementById('effectTwo').volume = 0.05;
   // clicking the ball opens a new modal
   const modal = document.getElementById('myModal');
     // the hatch looks empty again
@@ -64,13 +70,22 @@ function openModal() {
     // manipulating CSS with JS by changing the #note's bg img
     switch (ranNote) {
       case 1:
-      document.getElementById('note').style.backgroundColor = "red";
+      document.getElementById('note').style.backgroundColor = "rgb(255,255,172)";
         break;
       case 2:
-      document.getElementById('note').style.backgroundColor = "black";
+      document.getElementById('note').style.backgroundColor = "rgb(255,255,205)";
+        break;
+      case 3:
+      document.getElementById('note').style.backgroundColor = "rgb(255,161,255)";
+        break;
+      case 4:
+      document.getElementById('note').style.backgroundColor = "rgb(255,137,238)";
+        break;
+      case 5:
+      document.getElementById('note').style.backgroundColor = "rgb(230,190,255)";
         break;
       default:
-      document.getElementById('note').style.backgroundColor = "pink";
+      document.getElementById('note').style.backgroundColor = "rgb(213,161,255)";
     }
 
     // RANDOM TEXT APPEARS ON THE MODAL
@@ -120,7 +135,7 @@ window.onclick = function(event) {
 
 function creditModal() {
   const credits = document.getElementById('credModal');
-  document.getElementById('credits').style.backgroundColor = "pink";
+  document.getElementById('credits').style.backgroundColor = "rgb(230,190,255)";
   credits.style.display = 'block';
 }
 

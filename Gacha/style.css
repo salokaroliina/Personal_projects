@@ -17,6 +17,17 @@ body{
   background-repeat: repeat;
 }
 
+@media screen and (max-width: 650px){
+  .modal{
+    margin-top: 150px;
+  }
+
+  .gachaMachine{
+    top: 80px;
+    left: -15px;
+  }
+}
+
 /*Music-control and credits-button */
 .buttons{
 height: auto;
@@ -78,7 +89,7 @@ left: 75px;
 .modal{
   display: none;
   position: fixed;
-  padding-top: 100px;
+  padding-top: 150px;
   left: 0;
   top: 0;
   width: 100%;
